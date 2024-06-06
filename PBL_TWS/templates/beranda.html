@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+    <title>Beranda</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    body{
+        font-family: "Prompt", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+    };
+</style>
+<body class="bg-[#F3F3F4]">
+    <!-- Navbar -->
+    <nav class="sticky bg-[#F6995C] w-full z-20 top-0 start-0">
+        <div class="flex flex-row items-center justify-between mx-auto p-4">
+            <div class="flex"> 
+                <img src="../static/Asset/Logo_PENS.png" class="h-[70px]" alt="Pens Logo" />
+                <span class="self-center text-[40px] font-bold whitespace-nowrap text-black" id="web_name">EEPIS LENDING SPACE</span>
+            </div>
+            <!-- <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button> -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar_button">
+                <ul class="font-semibold flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+                    <li>
+                        <a href="/" class="block py-2 px-3 text-white border-b-[2px] border-white text-[30px] md:p-0" id="beranda">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="/daftarruangan" class="block py-2 px-3 text-black rounded hover:text-white text-[30px] md:p-0 " id="daftar_ruangan">Daftar Ruangan</a>
+                    </li>
+                    <li>
+                        <a href="/daftarpesan" class="block py-2 px-3 text-black rounded hover:text-white text-[30px] md:p-0" id="daftar_pesan">Daftar Pesan</a>
+                    </li>
+                    <li>
+                        <a href="/peminjaman" class="block py-2 px-3 text-black rounded hover:text-white text-[30px] md:p-0" id="daftar_peminjaman">Input Peminjaman</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      
+    <div class="grid grid-row-2 justify-center">   
+        <!-- Cards -->
+        <div class="flex flex-row pt-[38px]">
+            <!-- Card 1-->
+            <div class="max-w-[500px] mr-[40px] p-2  bg-white border border-gray-200 rounded-lg shadow">
+                <div class="flex flex-col">
+                    <div class="flex justify-between border-b-[2px] border-[#F3F3F4] pt-[10px] pb-[15px]">
+                        <p class="font-medium text-[25px]" id="peminjaman_card">Peminjaman Ruangan</p>
+                        <p class="text-[22px] text-white p-[2px] rounded-lg bg-[#2ABBAC] ml-[40px]" id="status_card">Disetujui</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <p class="flex justify-center text-[45px] font-semibold" id="value_card">471</p>
+                    <p class="flex justify-center text-[20px]" id="footer_card">Data Peminjaman</p>
+                </div>
+            </div>
+            <!-- Card 2-->
+            <div class="max-w-[500px] mr-[40px] p-2  bg-white border border-gray-200 rounded-lg shadow">
+                <div class="flex flex-col">
+                    <div class="flex justify-between border-b-[2px] border-[#F3F3F4] pt-[10px] pb-[15px]">
+                        <p class="font-medium text-[25px]" id="peminjaman_card">Peminjaman Ruangan</p>
+                        <p class="text-[22px] text-white p-[2px] rounded-lg bg-[#F8AC59] ml-[40px]" id="status_card">Menunggu</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <p class="flex justify-center text-[45px] font-semibold" id="value_card">116</p>
+                    <p class="flex justify-center text-[20px]" id="footer_card">Data Peminjaman</p>
+                </div>
+            </div>
+            <!-- Card 3-->
+            <div class="max-w-[500px] mr-[40px] p-2  bg-white border border-gray-200 rounded-lg shadow">
+                <div class="flex flex-col">
+                    <div class="flex flex-row justify-between border-b-[2px] border-[#F3F3F4] pt-[10px] pb-[15px]">
+                        <p class="font-medium text-[25px]" id="peminjaman_card">Peminjaman Ruangan</p>
+                        <p class="text-[22px] text-white pl-[15px] pr-[15px] pt-[5px] pb-[5px] rounded-lg bg-[#ED5565] ml-[40px]" id="status_card">Ditolak</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <p class="flex justify-center text-[45px] font-semibold" id="value_card">0</p>
+                    <p class="flex justify-center text-[20px]" id="footer_card">Data Peminjaman</p>
+                </div>
+            </div>
+            <!-- Card 4-->
+            <div class="max-w-[500px] p-2  bg-white border border-gray-200 rounded-lg shadow">
+                <div class="flex flex-col">
+                    <div class="flex justify-between border-b-[2px] border-[#F3F3F4] pt-[10px] pb-[15px]">
+                        <p class="font-medium text-[25px]" id="peminjaman_card">Peminjaman Ruangan</p>
+                        <p class="text-[22px] text-white pl-[15px] pr-[15px] pt-[5px] pb-[5px] rounded-lg bg-[#1C84C6] ml-[40px]" id="status_card">Total</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <p class="flex justify-center text-[45px] font-semibold" id="value_card">587</p>
+                    <p class="flex justify-center text-[20px]" id="footer_card">Data Peminjaman</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex flex-col max-w-[1800px] mt-[40px] p-2 bg-white border border-gray-200 rounded-none shadow ">
+            <div class="flex flex-row items-center">
+                <!-- Legend -->
+                <div class="flex flex-col max-w-[300px] p-2 ml-[40px] mt-[40px] mb-[40px] bg-[#EEEEEE] border border-gray-200 rounded-none shadow">
+                    <p class="text-[25px] text-black font-medium p-[5px]" id="status_pesan">Status Pesan</p>
+                    <p class="text-[22px] text-white p-[2px] mt-[7px] mb-[7px] rounded-lg bg-[#2ABBAC]" id="status_card">Disetujui</p>
+                    <p class="text-[22px] text-white p-[2px] mt-[7px] mb-[7px] rounded-lg bg-[#F8AC59]" id="status_card">Menunggu</p>
+                    <p class="text-[22px] text-white p-[2px] mt-[7px] mb-[7px] rounded-lg bg-[#ED5565]" id="status_card">Ditolak</p>
+                    <p class="text-[15px] text-black p-[5px] font-medium" id="status_pesan">Silahkan klik data untuk informasi lebih lanjut</p>
+                </div>
+                <div class="flex flex-nowrap place-self-start">
+                    <div class="flex flex-row place-self-start ml-[40px] mt-[40px] max-w-[115px] p-2 bg-black border border-gray-200 rounded-none shadow">
+                        <!-- Next Button -->
+                        <div  class="flex items-center pointer-events-none pr-[20px] border-r-[1px]">
+                            <a href="login.html" class="hover:text-[#595959]">
+                                <svg class="w-[28px] h-[28px] text-white " xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 12H6M12 5l-7 7 7 7"/>
+                                </svg>
+                            </a>    
+                        </div>
+                        <!-- Prev Button -->
+                        <div href="#" class="flex items-center pointer-events-none pl-[20px] border-l-[1px]">
+                            <a>
+                                <svg class="w-[28px] h-[28px] text-white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h13M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>    
+                        </div>
+                    </div>
+                    <!-- Today Button -->
+                    <a href="#" class="self-center ml-[40px] mt-[40px] text-[25px] text-white p-[5px] rounded-lg bg-black hover:bg-[#595959]" id="today_button">Today</a>
+                </div>
+                <div class="flex flex-nowrap place-self-start">
+                    <!-- Month -->
+                    <p class="flex place-self-center text-[50px] mt-[20px] ml-[200px]" id="month">
+                        March 2024
+                    </p>
+                </div>
+            </div>
+            <div class="container flex justify-center max-w-auto">
+                <table class="text-left w-[1000px] ml-[250px]" id="table">
+                <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
+                    <tbody class="flex flex-col items-center justify-between overflow-y-scroll w-full h-[1000px] mt-[-200px]" >
+                        <!-- Friday -->
+                        <tr class="flex flex-row bg-[#EEEEEE] text-[30px] text-[#3E72D8] w-full mb-4">
+                            <td class="mt-[16px] mb-[16px] mr-[150px] ml-[20px] w-1/2">Friday</td>
+                            <td class="flex justify-end mt-[16px] mb-[16px] w-1/2">March, 01 2024</td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">8:00am - 5:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/green-eclipse.svg" alt="green-eclipse">
+                                <p>HH-101</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">4:00pm - 9:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/green-eclipse.svg" alt="green-eclipse">
+                                <p>PS-01.10</p>
+                            </td>
+                        </tr>
+                        <!-- Saturday -->
+                        <tr class="flex flex-row bg-[#EEEEEE] text-[30px] text-[#3E62D8] w-full mb-4">
+                            <td class="mt-[16px] mb-[16px] mr-[150px] ml-[20px] w-1/2">Saturday</td>
+                            <td class="flex justify-end mt-[16px] mb-[16px] w-1/2">March, 02 2024</td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">8:00am - 9:15pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/green-eclipse.svg" alt="green-eclipse">
+                                <p>HALL-D4</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">8:00am - 5:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/green-eclipse.svg" alt="green-eclipse">
+                                <p>HH-101</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">8:00am - 5:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/yellow_eclipse.svg" alt="green-eclipse">
+                                <p>PS-02.10</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">9:00am - 4:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/yellow_eclipse.svg" alt="green-eclipse">
+                                <p>PS-05.01</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">03:00pm - 6:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/green-eclipse.svg" alt="green-eclipse">
+                                <p>LAP-D3</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">3:00pm - 6:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/yellow_eclipse.svg" alt="green-eclipse">
+                                <p>LAP-D4</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">3:00pm - 6:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/yellow_eclipse.svg" alt="green-eclipse">
+                                <p>LAP-D4</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">3:00pm - 6:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/yellow_eclipse.svg" alt="green-eclipse">
+                                <p>PS-LT 7</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">3:00pm - 6:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/green-eclipse.svg" alt="green-eclipse">
+                                <p>PS-01.10</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">3:00pm - 6:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/yellow_eclipse.svg" alt="green-eclipse">
+                                <p>S2</p>
+                            </td>
+                        </tr>
+                        <!-- Sunday -->
+                        <tr class="flex flex-row bg-[#EEEEEE] text-[30px] text-[#3E62D8] w-full mb-4">
+                            <td class="mt-[16px] mb-[16px] mr-[150px] ml-[20px] w-1/2">Sunday</td>
+                            <td class="flex justify-end mt-[16px] mb-[16px] w-1/2">March, 03 2024</td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">8:00am - 9:15pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/green-eclipse.svg" alt="green-eclipse">
+                                <p>HALL-D4</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">8:00am - 9:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/green-eclipse.svg" alt="green-eclipse">
+                                <p>HH-101</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">9:00am - 12:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/yellow_eclipse.svg" alt="green-eclipse">
+                                <p>GG-102</p>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-row text-[25px] w-full mb-4 border-[2px]">
+                            <td class="mt-[16px] mb-[16px] ml-[20px] w-1/4">1:00pm - 3:00pm</td>
+                            <td class="flex flex-row mt-[16px] mb-[16px] w-1/4">
+                                <img class="w-[25px] h-[25px] mt-[6px] mr-[10px]" src="../static/Asset/yellow_eclipse.svg" alt="green-eclipse">
+                                <p>PS-01.10</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <footer class="flex sticky bottom-0 left-0 z-20 w-full bg-[#51829B] rounded-none shadow" id="copyright">
+        <div class="items-center mx-auto max-w-screen-xl p-4">
+            <span class="text-[17px] text-white sm:text-center">
+                © 2024 Kelompok 4 - Teknologi Web Service. All rights reserved
+                <!-- © 2024 <a href="https://sainsdata.pens.ac.id/" class="hover:underline" target="_blank">SDT22</a>. All Rights Reserved. -->
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

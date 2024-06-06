@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+    <title>Daftar Pesanan</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    #web_name #username_label #login_header #password_label #password_form #username_form #copyright{
+        font-family: "Prompt", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    };
+</style>
+
+<body class="bg-[#F3F3F4]">
+    <!-- Navbar -->
+    <nav class="sticky bg-[#F6995C] w-full z-20 top-0 start-0">
+        <div class="flex flex-row items-center justify-between mx-auto p-4">
+            <div class="flex"> 
+                <img src="../static/Asset/Logo_PENS.png" class="h-[70px]" alt="Pens Logo" />
+                <span class="self-center text-[40px] font-bold whitespace-nowrap text-black" id="web_name">EEPIS LENDING SPACE</span>
+            </div>
+            <!-- <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button> -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar_button">
+                <ul class="font-semibold flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+                    <li>
+                        <a href="/beranda" class="block py-2 px-3 text-black hover:text-white text-[30px] md:p-0" id="beranda">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="/daftarruangan" class="block py-2 px-3 text-black rounded-none hover:text-white  text-[30px] md:p-0 " id="daftar_ruangan">Daftar Ruangan</a>
+                    </li>
+                    <li>
+                        <a href="/daftarpesan" class="block py-2 px-3 text-black rounded-none hover:text-white text-[30px] md:p-0" id="daftar_pesan">Daftar Pesan</a>
+                    </li>
+                    <li>
+                        <a href="/peminjaman" class="block py-2 px-3 text-white rounded-none
+                        border-b-[2px] border-white text-[30px] md:p-0" id="daftar_peminjaman" id="daftar_peminjaman">Input Peminjaman</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-col max-w-[1800px] mt-[40px] p-2 bg-white border border-gray-200 rounded-none shadow ">
+        <div class="grid grid-cols-2">
+            <!-- From -->
+            <form>
+                <h1 class="text-2xl font-bold mb-2">Form Peminjaman</h1>
+                <div class="mb-4">
+                    <label for="nama-lengkap" class="block mb-2">Nama Lengkap Peminjam</label>
+                    <input type="text" id="nama-lengkap" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <label for="nrp-peminjam" class="block mb-2">NRP Peminjam</label>
+                    <input type="text" id="nrp-peminjam" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <label for="nama-acara" class="block mb-2">Nama Acara</label>
+                    <input type="text" id="nama-acara" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <label for="deskripsi-acara" class="block mb-2">Deskripsi Acara</label>
+                    <textarea id="deskripsi-acara" class="w-3/4 p-2 pl-10 text-sm text-gray-700"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="ormawa" class="block mb-2">Ormawa</label>
+                    <input type="text" id="ormawa" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <label for="tanggal-pinjam" class="block mb-2">Tanggal Pinjam</label>
+                    <input type="date" id="tanggal-pinjam" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <label for="tanggal-selesai" class="block mb-2">Tanggal Selesai</label>
+                    <input type="date" id="tanggal-selesai" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <label for="jam-pinjam" class="block mb-2">Jam Pinjam</label>
+                    <input type="time" id="jam-pinjam" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <label for="jam-selesai" class="block mb-2">Jam Selesai</label>
+                    <input type="time" id="jam-selesai" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <label for="ruangan" class="block mb-2">Ruangan</label>
+                    <select id="ruangan" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                        <option value="">Select Ruangan</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="file-pdf" class="block mb-2">File PDF Proposal</label>
+                    <input type="file" id="file-pdf" class="w-full p-2 pl-10 text-sm text-gray-700">
+                </div>
+                <div class="mb-4">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Clear Form</button>
+                    <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">Pesan</button>
+                </div>
+            </form>
+            <!-- Sistem Rekomendasi Ketersediaan -->
+            <div class="p-4">
+                <h1 class="text-2xl font-bold mb-2">Sistem Rekomendasi Ketersediaan Ruangan</h1>
+                <div class="grid grid-cols-2 grid-row-2">
+                    <div class="">
+                        <label for="tanggal-pinjam" class="block mb-2">Tanggal Pinjam</label>
+                        <input type="date" id="tanggal-pinjam" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                    </div>
+                    <div class="">
+                        <label for="jam-pinjam" class="block mb-2">Jam Pinjam</label>
+                        <input type="time" id="jam-pinjam" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                    </div>
+                    <div class="">
+                        <label for="tanggal-selesai" class="block mb-2">Tanggal Selesai</label>
+                        <input type="date" id="tanggal-selesai" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                    </div>
+                    <div class="">
+                        <label for="jam-selesai" class="block mb-2">Jam Selesai</label>
+                        <input type="time" id="jam-selesai" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                    </div>
+                    <div class="">
+                        <label for="kapasitas-ruangan" class="block mb-2">Kapasitas Ruangan</label>
+                        <input type="number" id="kapasitas-ruangan" class="w-[200px] p-2 pl-10 text-sm text-gray-700">
+                    </div>
+                    <div class="">
+                        <label for="gedung" class="block mb-2">Gedung</label>
+                        <select id="gedung" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                            <option value="">Select Gedung</option>
+                            <!-- options will be populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="lantai" class="block mb-2">Lantai</label>
+                        <select id="lantai" class="w-3/4 p-2 pl-10 text-sm text-gray-700">
+                            <option value="">Select Lantai</option>
+                            <!-- options will be populated dynamically -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <footer class="flex sticky bottom-0 left-0 z-20 w-full bg-[#51829B] rounded-none shadow" id="copyright">
+        <div class="items-center mx-auto max-w-screen-xl p-4">
+            <span class="text-[17px] text-white sm:text-center">
+                © 2024 Kelompok 4 - Teknologi Web Service. All rights reserved
+                <!-- © 2024 <a href="https://sainsdata.pens.ac.id/" class="hover:underline" target="_blank">SDT22</a>. All Rights Reserved. -->
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
