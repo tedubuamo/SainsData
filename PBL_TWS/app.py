@@ -19,7 +19,7 @@ def get_db_connection():
 
 # SQL queries
 CREATE_USER_TABLE = """
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS users ( 
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL
